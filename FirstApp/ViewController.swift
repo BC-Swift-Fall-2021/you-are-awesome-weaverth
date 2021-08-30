@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     @IBAction func swallowButtonPressed(_ sender: UIButton) {
         
         print("😎🍆💦 swallowButton has been pressed!")
-        messageLabel.text = "Ohhhhhh yeaaaaahhhhh!!!"
+        messageLabel.text = "Ohhhhhh yeaaaaahhhhh!!"
         
     }
     
