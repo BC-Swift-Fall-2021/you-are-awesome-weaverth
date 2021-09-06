@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         imageView.image = UIImage(named: imageName)
         awesomeLabel.text = messages[Int.random(in: 0...messages.count - 1)]
         imageNumber = Int.random(in: 0...9 - 1)
-
+// 
         //       if imageNumber < 9 {
 //            imageNumber = imageNumber + 1
 //        }
