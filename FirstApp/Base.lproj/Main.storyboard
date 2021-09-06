@@ -32,7 +32,7 @@
                                             <action selector="swallowButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PYR-3s-3yy"/>
                                         </connections>
                                     </button>
-                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p9Q-7j-1GL">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p9Q-7j-1GL">
                                         <rect key="frame" x="16" y="124" width="358" height="626"/>
                                     </imageView>
                                 </subviews>
