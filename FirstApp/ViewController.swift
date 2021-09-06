@@ -12,6 +12,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var awesomeLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     var imageNumber = 0
+    var awesomeLabelMessages = ["Beans?",
+                                "Beans!!!",
+                                "Bean Bean!",
+                                "Yeah Beans!",
+                                "Mmm Bean.",
+                                "Bean...",
+                                "Frijoles!!!",
+                                "Bean Bean bean",
+                                "Bean man!",
+                                "Where you bean?",
+                                "b e a n :)"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +36,10 @@ class ViewController: UIViewController {
         print(imageNumber)
         //let imageName = "image" + String(imageNumber)
         let imageName = "image\(imageNumber)"
+        let awesomeMessage = awesomeLabelMessages[imageNumber]
         imageView.image = UIImage(named: imageName)
+        awesomeLabel.text = awesomeMessage
+        
         if imageNumber < 9 {
             imageNumber = imageNumber + 1
         }
