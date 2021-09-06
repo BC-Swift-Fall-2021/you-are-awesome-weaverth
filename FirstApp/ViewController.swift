@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var awesomeLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     var imageNumber = 0
-    var awesomeLabelMessages = ["Beans?",
+    let messages = ["Beans?",
                                 "Beans!!!",
                                 "Bean Bean!",
                                 "Yeah Beans!",
@@ -36,16 +36,17 @@ class ViewController: UIViewController {
         print(imageNumber)
         //let imageName = "image" + String(imageNumber)
         let imageName = "image\(imageNumber)"
-        let awesomeMessage = awesomeLabelMessages[imageNumber]
+        //let awesomeMessage = messages[imageNumber]
         imageView.image = UIImage(named: imageName)
-        awesomeLabel.text = awesomeMessage
-        
-        if imageNumber < 9 {
-            imageNumber = imageNumber + 1
-        }
-        else {
-            imageNumber = 0
-        }
+        awesomeLabel.text = messages[Int.random(in: 0...messages.count - 1)]
+        imageNumber = Int.random(in: 0...9 - 1)
+
+        //       if imageNumber < 9 {
+//            imageNumber = imageNumber + 1
+//        }
+//        else {
+//            imageNumber = 0
+//        }
         
         
         
