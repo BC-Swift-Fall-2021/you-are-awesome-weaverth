@@ -11,62 +11,44 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var awesomeLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-    var imageNumber = 0
-    let messages = ["Beans?",
-                                "Beans!!!",
-                                "Bean Bean!",
-                                "Yeah Beans!",
-                                "Mmm Bean.",
-                                "Bean...",
-                                "Frijoles!!!",
-                                "Bean Bean bean",
-                                "Bean man!",
-                                "Where you bean?",
-                                "b e a n :)"]
+    var imageNumber = -1
+    var messageNumber = -1
+    let totalNumberOfImages = 9
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
     }
 
     @IBAction func swallowButtonPressed(_ sender: UIButton) {
         
-        print(imageNumber)
-        //let imageName = "image" + String(imageNumber)
-        let imageName = "image\(imageNumber)"
-        //let awesomeMessage = messages[imageNumber]
-        imageView.image = UIImage(named: imageName)
-        awesomeLabel.text = messages[Int.random(in: 0...messages.count - 1)]
-        imageNumber = Int.random(in: 0...9 - 1)
-// 
-        //       if imageNumber < 9 {
-//            imageNumber = imageNumber + 1
-//        }
-//        else {
-//            imageNumber = 0
-//        }
+        let messages = ["Beans?",
+                        "Beans!!!",
+                        "Bean Bean!",
+                        "Yeah Beans!",
+                        "Mmm Bean.",
+                        "Bean...",
+                        "Frijoles!!!",
+                        "Bean Bean bean",
+                        "Bean man!",
+                        "Where you bean?",
+                        "b e a n :)"]
         
+       
+        var newMessageNumber: Int
+        repeat {
+            newMessageNumber = Int.random(in: 0...messages.count-1)
+        } while messageNumber == newMessageNumber
+        messageNumber = newMessageNumber
+        awesomeLabel.text = messages[messageNumber]
         
-        
-    //        let awesomeMessage = "Ohhhhhh yeaaaaahhhhh!!"
-    //        let greatMessage = "Mmmmmm hmmm!!"
-    //        let bombMessage = "Bazinga!!!!!"
-    //
-    //        if awesomeLabel.text == awesomeMessage {
-    //            awesomeLabel.text = greatMessage
-    //            imageView.image = UIImage(named: "image1")
-    //        }
-    //        else if awesomeLabel.text == greatMessage {
-    //            awesomeLabel.text = bombMessage
-    //            imageView.image = UIImage(named: "image2")
-    //        }
-    //        else {
-    //            awesomeLabel.text = awesomeMessage
-    //            imageView.image = UIImage(named: "image0")
-    //        }
-             
+        var newImageNumber: Int
+        repeat {
+            newImageNumber = Int.random(in: 0...totalNumberOfImages)
+        } while imageNumber == newImageNumber
+        imageNumber = newImageNumber
+        imageView.image = UIImage(named: "image\(imageNumber)")
+
             
     }
     
